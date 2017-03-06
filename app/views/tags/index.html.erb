@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>All Tags</h1>
+<h1>All Tags</h1>
 
-    <ul id="tags">
-      <% @tags.each do |tag| %>
-        <li>
-          <span><%= link_to tag.name, tag_path(tag), class: 'tag_name', id: 'tag_#{tag.id}' %></span>
-          <span><%= link_to "delete", tag_path(tag), method: :delete, data: {confirm: "Really delete the tag?"}%><span>
-        </li>
-      <% end %>
-    </ul>
-</body>
-</html>
+<ul id="tags">
+  <% @tags.each do |tag| %>
+    <li>
+      <span><%= link_to tag.name, tag_path(tag), class: 'tag_name', id: 'tag_#{tag.id}' %></span>
+      <span><%= link_to "delete", tag_path(tag), method: :delete, data: {confirm: "Really delete the tag?"}%><span>
+    </li>
+  <% end %>
+</ul>
